@@ -17,7 +17,7 @@ class Api::V1::ItemsController < ApiBaseController
   end
 
   def create
-    render json: Item.create(name: params["name"], description: params["description"], image_url: params["image_url"]),
-           status: 201
+    item = Item.create(name: params["name"], description: params["description"], image_url: params["image_url"])
+    render json: item, status: 201
   end
 end
