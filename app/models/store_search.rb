@@ -10,9 +10,17 @@ class StoreSearch
   end
 
   def get_stores
-    stores = raw_store_responses["stores"].map do |store|
+    raw_store_responses["stores"].map do |store|
       Store.new(store)
     end
+  end
+
+  def self.response_count(zip)
+    new(zip).response_count
+  end
+
+  def response_count
+    raw_store_responses["total"]
   end
 
   private

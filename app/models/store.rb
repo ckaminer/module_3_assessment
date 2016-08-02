@@ -1,7 +1,12 @@
 class Store
+  attr_reader :name, :city, :distance, :phone, :storeType
 
   def initialize(attrs)
-    @zip = attrs[:zip]
+    @name = attrs["longName"]
+    @city = attrs["city"]
+    @distance = attrs["distance"]
+    @phone = attrs["phone"]
+    @storeType = attrs["storeType"]
   end
 
 end

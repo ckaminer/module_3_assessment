@@ -12,10 +12,10 @@ RSpec.feature "user can search for stores by zip code" do
         expect(current_path).to eq "/search"
         expect(page).to have_content "17 Total Stores"
         within ".results" do
-          expect(page).to have_selector('.store', count: 15)
+          expect(page).to have_selector('.store', count: 10)
         end
 
-        within ".store" do
+        within "#1" do
           expect(page).to have_content "Name"
           expect(page).to have_content "City"
           expect(page).to have_content "Distance"
