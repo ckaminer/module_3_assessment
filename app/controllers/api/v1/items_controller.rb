@@ -9,7 +9,8 @@ class Api::V1::ItemsController < ApiBaseController
   end
 
   def destroy
-    render json: Item.find(params[:id]).destroy
-    render status: 204
+    Item.find(params[:id]).destroy
+    render json: {head: :no_content, status: 204}
+    # status: 204
   end
 end

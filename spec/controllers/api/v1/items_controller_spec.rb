@@ -38,7 +38,7 @@ RSpec.describe Api::V1::ItemsController do
     it "can get single specified items" do
       item = items(:one)
       delete :destroy, id: item.id
-
+byebug
       expect(response.status).to eq 204
       expect(items.count).to eq 1
     end
