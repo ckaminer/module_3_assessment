@@ -6,7 +6,7 @@ class SearchController < ApplicationController
   end
 
   def show
-    @store = StoreSearch.get_store(params[:zip])
+    @store = StoreSearch.get_store(params[:id])["stores"].first
   end
 
 end

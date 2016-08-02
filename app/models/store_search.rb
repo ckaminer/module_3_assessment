@@ -15,6 +15,10 @@ class StoreSearch
     end
   end
 
+  def self.get_store(id)
+    SearchService.new.find_store(id)
+  end
+
   def self.response_count(zip)
     new(zip).response_count
   end

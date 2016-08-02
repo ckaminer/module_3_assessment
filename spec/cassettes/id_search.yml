@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.bestbuy.com/v1/stores(storeId=210)?apiKey=a8k7nnexb87aa9hb3zzqbgf7&format=json&show=longName,city,distance,phone,storeType,storeId
+    uri: https://api.bestbuy.com/v1/stores(storeId=210)?apiKey=a8k7nnexb87aa9hb3zzqbgf7&format=json&show=longName,address,city,region,postalCode,storeType
     body:
       encoding: US-ASCII
       string: ''
@@ -21,13 +21,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 02 Aug 2016 17:44:17 GMT
+      - Tue, 02 Aug 2016 17:50:52 GMT
       Server:
       - thin 1.6.1 codename Death Proof
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1e-108.mashery.com
+      - prod-j-worker-us-east-1b-118.mashery.com
       Content-Length:
-      - '469'
+      - '512'
       Connection:
       - keep-alive
     body:
@@ -42,17 +42,18 @@ http_interactions:
           "queryTime": "0.003",
           "totalTime": "0.005",
           "partial": false,
-          "canonicalUrl": "/v1/stores(storeId=210)?show=longName,city,distance,phone,storeType,storeId&format=json&apiKey=a8k7nnexb87aa9hb3zzqbgf7",
+          "canonicalUrl": "/v1/stores(storeId=210)?show=longName,address,city,region,postalCode,storeType&format=json&apiKey=a8k7nnexb87aa9hb3zzqbgf7",
           "stores": [
             {
               "longName": "Best Buy - Littleton",
+              "address": "5395 S Wadsworth Blvd",
               "city": "Littleton",
-              "phone": "303-932-7830",
-              "storeType": "BigBox",
-              "storeId": 210
+              "region": "CO",
+              "postalCode": "80123",
+              "storeType": "BigBox"
             }
           ]
         }
     http_version: 
-  recorded_at: Tue, 02 Aug 2016 17:44:17 GMT
+  recorded_at: Tue, 02 Aug 2016 17:50:52 GMT
 recorded_with: VCR 3.0.3

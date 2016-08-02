@@ -19,7 +19,7 @@ class SearchService
       req.url "/v1/stores(storeId=#{id})"
       req.params['apiKey'] = ENV["BEST_BUY_KEY"]
       req.params['format'] = "json"
-      req.params['show'] = "longName,city,distance,phone,storeType,storeId"
+      req.params['show'] = "longName,address,city,region,postalCode,storeType"
     end
     parsed = parse(response)
   end
