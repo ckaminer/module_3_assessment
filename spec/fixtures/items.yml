@@ -4,3 +4,10 @@ one:
   image_url: First image url
   created_at: created_at
   updated_at: updated_at
+
+two:
+  name: Second Item
+  description: Second Description
+  image_url: Second image url
+  created_at: created_at
+  updated_at: updated_at
