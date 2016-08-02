@@ -1,5 +1,6 @@
 class StoreSearch
-
+  attr_reader :zip
+  
   def initialize(zip)
     @zip = zip
   end
@@ -8,7 +9,7 @@ class StoreSearch
     new(zip).get_stores
   end
 
-  def get_stores(zip)
+  def get_stores
     service.get_stores(zip)
   end
 
