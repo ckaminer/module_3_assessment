@@ -35,12 +35,30 @@ RSpec.describe Api::V1::ItemsController do
   end
 
   describe "DELETE destroy" do
-    it "can get single specified items" do
+    it "can delete single specified items" do
       item = items(:one)
       delete :destroy, id: item.id
-byebug
+
       expect(response.status).to eq 204
-      expect(items.count).to eq 1
+    end
+  end
+
+  describe "POST create" do
+    it "can create a new item" do
+      name = "New Name"
+      description = "New Description"
+      image_url = "New Image"
+      post :create, name: name, description: description, image_url: image_url
+
+      expect(response.status).to eq 201
+
+      item = JSON.parse(response.body)
+
+      expect(item["name"]).to eq name
+      expect(item["description"]).to eq description
+      expect(item["image_url"]).to eq image_url
+      expect(item["created_at"]).to eq nil
+      expect(item["updated_at"]).to eq nil
     end
   end
 end
