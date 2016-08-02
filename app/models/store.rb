@@ -7,6 +7,7 @@ class Store
     @distance = attrs["distance"]
     @phone = attrs["phone"]
     @storeType = attrs["storeType"]
+    @id = attrs["storeId"]
   end
 
 end

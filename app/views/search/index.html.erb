@@ -4,7 +4,7 @@
   <% @stores.each do |store| %>
     <div class="store" id="<%= @stores.index(store) %>">
       <ul>
-        <li>Name: <%= store.name %></li>
+        <li>Name: <%= link_to store.name, store_path(store) %></li>
         <li>City: <%= store.city %></li>
         <li>Distance: <%= store.distance %></li>
         <li>Phone Number: <%= store.phone %></li>

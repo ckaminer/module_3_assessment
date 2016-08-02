@@ -16,4 +16,20 @@ describe SearchService do
       end
     end
   end
+
+  context "#id" do
+    it "returns store for given id" do
+      VCR.use_cassette("id_search") do
+        id = "210"
+        store = SearchService.new.find_store(id)
+# byebug
+        expect(store["total"]).to eq 1
+        expect(store["stores"].first["longName"]).to eq "Best Buy - Littleton"
+        expect(store["stores"].first["city"]).to eq "Littleton"
+        expect(store["stores"].first["phone"]).to eq "303-932-7830"
+        expect(store["stores"].first["distance"]).to eq 3.25
+        expect(store["stores"].first["storeType"]).to eq "BigBox"
+      end
+    end
+  end
 end

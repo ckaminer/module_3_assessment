@@ -5,4 +5,8 @@ class SearchController < ApplicationController
     @count = StoreSearch.response_count(params[:zip])
   end
 
+  def show
+    @store = StoreSearch.get_store(params[:zip])
+  end
+
 end
