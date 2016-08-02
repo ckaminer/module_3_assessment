@@ -1,4 +1,4 @@
-class BestBuyService
+class SearchService
 
   def initialize
     @_connection = Faraday.new("https://api.bestbuy.com")
