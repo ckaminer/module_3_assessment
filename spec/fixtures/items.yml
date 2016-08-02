@@ -1,3 +1,6 @@
 one:
   name: First Item
   description: First Description
+  image_url: First image url
+  created_at: created_at
+  updated_at: updated_at
